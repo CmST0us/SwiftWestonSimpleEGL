@@ -1,0 +1,51 @@
+{
+  "originHash" : "a5ea30398c9144f4c7c1de92dbd0dc57c7611d86ef4bfd1dbea14146b5c9e0c1",
+  "pins" : [
+    {
+      "identity" : "swiftcegl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/SwiftCEGL",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bc21a809ad4b135f4f33730f877d00cb69828ba5"
+      }
+    },
+    {
+      "identity" : "swiftcwaylandclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/SwiftCWaylandClient",
+      "state" : {
+        "branch" : "main",
+        "revision" : "44f4f9d27cb6346f81ceb7ccad913250072a4791"
+      }
+    },
+    {
+      "identity" : "swiftcwaylandegl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/SwiftCWaylandEGL",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c138ed28513c5a07bede343956931b2c95ff7d63"
+      }
+    },
+    {
+      "identity" : "swiftglew",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/SwiftGLEW",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0c8fd47421f3aa5aebf7004891c3cdf2b9610f3f"
+      }
+    },
+    {
+      "identity" : "xdgshellprotocol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/XDGShellProtocol",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a599922f43050159a324ac3eb4d8a39eea1a4dee"
+      }
+    }
+  ],
+  "version" : 3
+}
