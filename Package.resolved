@@ -1,5 +1,5 @@
 {
-  "originHash" : "a5ea30398c9144f4c7c1de92dbd0dc57c7611d86ef4bfd1dbea14146b5c9e0c1",
+  "originHash" : "b6f4063de15aae7f310eedf79ea3eed6e6571b75e136e62a7d3883b9ddacbd20",
   "pins" : [
     {
       "identity" : "swiftcegl",
@@ -35,6 +35,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "0c8fd47421f3aa5aebf7004891c3cdf2b9610f3f"
+      }
+    },
+    {
+      "identity" : "swiftimgui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CmST0us/SwiftImGui",
+      "state" : {
+        "branch" : "main",
+        "revision" : "22b9fa5bb0ee26dfbdb6f04b8a122632afa9a852"
       }
     },
     {
