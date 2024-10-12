@@ -1,6 +1,7 @@
 import GLEW
 import CEGL
 import CWaylandClient
+import Glibc
 class App {
     private let display: Display
     private var window: Window? = nil

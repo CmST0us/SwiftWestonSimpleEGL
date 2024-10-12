@@ -3,7 +3,7 @@ import CEGL
 import CWaylandClient
 import ImGui
 import ImGuiBackend
-
+import Glibc
 class App {
     private let display: Display
     private var window: Window? = nil
