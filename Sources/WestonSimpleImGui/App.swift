@@ -110,6 +110,7 @@ class App {
         let context = ImGui.createContext()
         context?.pointee.IO.DisplaySize.x = Float(WIDTH)
         context?.pointee.IO.DisplaySize.y = Float(HEIGHT)
+        ImGui.io.pointee.ConfigFlags = ImGui.ConfigFlags.navEnableKeyboard.rawValue
         
         imgui_backend_OpenGL3_Init("#version 100");
         ImGui.styleColorsDark();
