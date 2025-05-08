@@ -395,8 +395,47 @@ fileprivate func keyboard_key(
 ) {
     if let io = ImGui.io {
         if let mapping = mapKeycodeToImGuiKey(keycode: key) {
-            io.pointee.addKeyEvent(key: ImGui.Key(rawValue: Int32(mapping.rawValue)) ?? .none, down: state == WL_KEYBOARD_KEY_STATE_PRESSED.rawValue)
-            io.pointee.setKeyEventNativeData(key: ImGui.Key(rawValue: Int32(mapping.rawValue)) ?? .none, nativeKeycode: Int(key), nativeScancode: -1)
+            let imguiKey = ImGui.Key(rawValue: Int32(mapping.rawValue)) ?? .none
+            io.pointee.addKeyEvent(key: imguiKey, down: state == WL_KEYBOARD_KEY_STATE_PRESSED.rawValue)
+            
+            // 将ImGuiKey转换为对应的字符
+            if state == WL_KEYBOARD_KEY_STATE_PRESSED.rawValue {
+                var c: UInt32 = 0
+                switch mapping {
+                    case ImGuiKey_A: c = UInt32(UnicodeScalar("a").value)
+                    case ImGuiKey_B: c = UInt32(UnicodeScalar("b").value)
+                    case ImGuiKey_C: c = UInt32(UnicodeScalar("c").value)
+                    case ImGuiKey_D: c = UInt32(UnicodeScalar("d").value)
+                    case ImGuiKey_E: c = UInt32(UnicodeScalar("e").value)
+                    case ImGuiKey_F: c = UInt32(UnicodeScalar("f").value)
+                    case ImGuiKey_G: c = UInt32(UnicodeScalar("g").value)
+                    case ImGuiKey_H: c = UInt32(UnicodeScalar("h").value)
+                    case ImGuiKey_I: c = UInt32(UnicodeScalar("i").value)
+                    case ImGuiKey_J: c = UInt32(UnicodeScalar("j").value)
+                    case ImGuiKey_K: c = UInt32(UnicodeScalar("k").value)
+                    case ImGuiKey_L: c = UInt32(UnicodeScalar("l").value)
+                    case ImGuiKey_M: c = UInt32(UnicodeScalar("m").value)
+                    case ImGuiKey_N: c = UInt32(UnicodeScalar("n").value)
+                    case ImGuiKey_O: c = UInt32(UnicodeScalar("o").value)
+                    case ImGuiKey_P: c = UInt32(UnicodeScalar("p").value)
+                    case ImGuiKey_Q: c = UInt32(UnicodeScalar("q").value)
+                    case ImGuiKey_R: c = UInt32(UnicodeScalar("r").value)
+                    case ImGuiKey_S: c = UInt32(UnicodeScalar("s").value)
+                    case ImGuiKey_T: c = UInt32(UnicodeScalar("t").value)
+                    case ImGuiKey_U: c = UInt32(UnicodeScalar("u").value)
+                    case ImGuiKey_V: c = UInt32(UnicodeScalar("v").value)
+                    case ImGuiKey_W: c = UInt32(UnicodeScalar("w").value)
+                    case ImGuiKey_X: c = UInt32(UnicodeScalar("x").value)
+                    case ImGuiKey_Y: c = UInt32(UnicodeScalar("y").value)
+                    case ImGuiKey_Z: c = UInt32(UnicodeScalar("z").value)
+                    default: break
+                }
+                if c != 0 {
+                    io.pointee.addInputCharacter(c: c)
+                }
+            }
+            
+            io.pointee.setKeyEventNativeData(key: imguiKey, nativeKeycode: Int(key), nativeScancode: -1)
         }
     }
 }

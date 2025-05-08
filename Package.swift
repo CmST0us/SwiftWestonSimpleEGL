@@ -22,6 +22,9 @@ let package = Package(
                 .product(name: "CWaylandClient", package: "SwiftCWaylandClient"),
                 .product(name: "CWaylandEGL", package: "SwiftCWaylandEGL"),
                 .product(name: "GLEW", package: "SwiftGLEW"),
+            ],
+            linkerSettings: [
+                .linkedLibrary("GL"),
             ]),
         .executableTarget(
             name: "WestonSimpleImGui",
@@ -33,6 +36,9 @@ let package = Package(
                 .product(name: "GLEW", package: "SwiftGLEW"),
                 .product(name: "ImGui", package: "SwiftImGui"),
                 .product(name: "ImGuiBackend", package: "SwiftImGui")
+            ],
+            linkerSettings: [
+                .linkedLibrary("GL"),
             ])
     ]
 )
